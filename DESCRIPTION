@@ -1,0 +1,19 @@
+Package: IRTShiny
+Type: Package
+Title: Item Responce Theory via Shiny
+Version: 1.0
+Date: 2014-11-24
+Author: William Kyle Hamilton <kyle.hamilton@gmail.com>, Atsushi Mizumoto
+    <atsushi@mizumot.com>
+Maintainer: William Kyle Hamilton <kyle.hamilton@gmail.com>
+Description: Interactive shiny application for running Item Response Theory
+    analysis.
+License: GPL-3
+Imports:
+    shiny,
+    shinyAce,
+    beeswarm,
+    CTT,
+    ltm,
+    parallel,
+LazyData: true
