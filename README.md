@@ -1,6 +1,6 @@
 IRTShiny: Item Response Theory with Shiny
 ========
-
+[![DOI](https://zenodo.org/badge/9922/kylehamilton/IRTShiny.svg)](http://dx.doi.org/10.5281/zenodo.14965)
 The goal of this project is to help students and researchers run Item Response Theory analysis.
 
 List of Packages Used 
