@@ -16,4 +16,5 @@ Depends:
     CTT,
     ltm,
     parallel,
+    psych
 LazyData: true
