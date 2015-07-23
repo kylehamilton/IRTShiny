@@ -9,7 +9,7 @@ Maintainer: William Kyle Hamilton <kyle.hamilton@gmail.com>
 Description: Interactive shiny application for running Item Response Theory
     analysis.
 License: GPL-3
-Imports:
+Depends:
     shiny,
     shinyAce,
     beeswarm,
