@@ -5,7 +5,7 @@ library(shinyAce)
 
 shinyUI(bootstrapPage(
 
-    headerPanel("Item Response Theory"),
+    headerPanel("Item Response Theory"), 
 
 
 ########## Adding loading message #########
@@ -47,7 +47,7 @@ br()
         tabsetPanel(
 
 
-        tabPanel("Dichotomous Models",
+        tabPanel("Dichotomous Models", icon = icon("chevron-right", lib = "font-awesome"),
 
         radioButtons("type", strong("Model selection:"),
             list("One-parameter logistic model (1PL)" = "1PL",
@@ -129,7 +129,7 @@ br()
 
 
 
-        tabPanel("Polytomous Models",
+        tabPanel("Polytomous Models", icon = icon("chevron-right", lib = "font-awesome"),
 
         br(),
 
@@ -229,7 +229,7 @@ br()
 
 
 
-        tabPanel("Binary (1-0) Data Converter",
+        tabPanel("Binary (1-0) Data Converter", icon = icon("table", lib = "font-awesome"),
                  strong('Option:'),
                  
                  
@@ -264,14 +264,22 @@ br()
                  
         ),
         
-        tabPanel("About",
+        tabPanel("About", icon = icon("dot-circle-o", lib = "font-awesome"),
                  strong('IRT with Shiny'),
+                 p("IRTShiny Version 1.0.1"),
                  p("The goal of this project is to help students and researchers run IRT analysis as easily as possible."),
                  p('This application is developed with',
                    a("Shiny.", href="http://www.rstudio.com/shiny/", target="_blank"),
                    ''),
                  p('The code for this application is available at this',
-                   a('GitHub.', href='https://github.com/kylehamilton/meta', target="_blank")),
+                   a('GitHub.', href='https://github.com/kylehamilton/IRTShiny', target="_blank")),
+                 p("If you're having problems with IRTShiny feel free to refer to our GitHub wiki or the documentation available on CRAN."),
+                 a("CRAN page for IRTShiny", href="http://cran.r-project.org/web/packages/IRTShiny/index.html", target="_blank"),
+                 br(),
+                 a("GitHub Wiki page for IRTShiny", href="https://github.com/kylehamilton/IRTShiny/wiki", target="_blank"),
+                 br(),
+                 p("As always you are more than welcome to contact the project maintainer at kyle.hamilton@gmail.com"),
+                 
                  
                  
                  br(),
@@ -318,6 +326,36 @@ br()
                    
                  ),
                  br(),
+                 strong('Bug Reports'),
+                 
+                 p("If you discover a problem with IRTShiny please submit it to the project GitHub page", 
+                   a("https://github.com/kylehamilton/IRTShiny/issues", href="https://github.com/kylehamilton/IRTShiny/issues", target="_blank"),br()),
+                 
+                 p("IRTShiny is an Open Source project, you are more than welcome to submit patches or features and help the project grow."),
+                 strong('License'),
+                 
+                 p("IRTShiny: Item Response Theory with Shiny"),
+                 p(" Copyright 2015  William Kyle Hamilton and Atsushi Mizumoto"),
+                 
+                 p(" This program is free software you can redistribute it and or modify
+           it under the terms of the GNU General Public License as published by
+           the Free Software Foundation either version 3 of the License or
+           at your option any later version."),
+                 
+                 p("This program is distributed in the hope that it will be useful,
+           but WITHOUT ANY WARRANTY; without even the implied warranty of
+           MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+           GNU General Public License for more details."),
+                 
+                 p("You should have received a copy of the GNU General Public License
+           along with this program.  If not, see", a("http://www.gnu.org/licenses/gpl.html", href="http://www.gnu.org/licenses/gpl.html", target="_blank"),br()),
+                 img(src = "http://www.gnu.org/graphics/gplv3-127x51.png", seamless=NA),
+                 
+                 
+                 br(),
+                 
+                 strong('Futher Infomation'),
+                 p("If you would like to learn more about the GNU General Public License and what it means tl'dr legal has a simple explaination which can be found here", a("https://www.tldrlegal.com/l/gpl-3.0", href="https://www.tldrlegal.com/l/gpl-3.0", target="_blank"),br()),
                  
                  
                  p(br())
