@@ -1,10 +1,10 @@
-# library(shiny)
-# library(shinyAce)
-# library(psych)
-# library(CTT)
-# library(ltm)
-# library(beeswarm)
-# library(parallel)
+library(shiny)
+library(shinyAce)
+library(psych)
+library(CTT)
+library(ltm)
+library(beeswarm)
+library(parallel)
 
 shinyServer(function(input, output) {
 
@@ -130,8 +130,8 @@ shinyServer(function(input, output) {
                  list(result = result, est = est)
                  
              } else if (input$type == "2PL") {
-                 
-                 result <- ltm(dat ~ z1)
+                  result <- ltm(dat ~ z1)
+                  # result <- ltm(dat ~ z1, control = list(method = input$optimmethod, verbose=TRUE))
                  est <- factor.scores(result)
                  list(result = result, est = est)
                  
@@ -891,6 +891,10 @@ output$downloaddistPlot2 <- downloadHandler(
 output$info3.out <- renderPrint({
   info3()
 })
+################################################
+# server.R and ui.R connection
+################################################
+output$optimmethod.out <- renderPrint({ input$optimmethod })
 
 # R session info
 
