@@ -1,0 +1,8 @@
+# CHANGES TO IRTShiny 1.1 #
+
+## SIGNIFICANT USER-VISIBILE CHANGES ##
+
+* Changed UI for IRTShiny, using navbarPage option in Shiny.
+* Updated About section.
+* Added icons throughout UI.
+* Online demo can be found at http://kylehamilton.net/shiny/IRTShiny/

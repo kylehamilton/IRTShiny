@@ -1,3 +1,6 @@
+---
+output: html_document
+---
 IRTShiny: Item Response Theory with Shiny
 ========
 [![DOI](https://zenodo.org/badge/9922/kylehamilton/IRTShiny.svg)](http://dx.doi.org/10.5281/zenodo.14965)
