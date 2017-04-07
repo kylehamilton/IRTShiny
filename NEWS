@@ -1,3 +1,9 @@
+# CHANGES TO IRTShiny 1.2 #
+
+## SIGNIFICANT USER-VISIBILE CHANGES ##
+
+* Added a side panel to the polytomous models tab. Thanks to Fred Oslwald for pointing this omission out to me.
+
 # CHANGES TO IRTShiny 1.1 #
 
 ## SIGNIFICANT USER-VISIBILE CHANGES ##

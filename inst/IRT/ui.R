@@ -132,11 +132,18 @@ shinyUI(navbarPage("IRTShiny", windowTitle="IRTShiny v1.1",
 
         tabPanel("Polytomous Models", icon = icon("chevron-right", lib = "font-awesome"),
 
-        br(),
+                 sidebarPanel(
+                   p(' '),
+                   submitButton("Update View"),
+                   helpText("Click here to update your results, you need to do this after you change the data, model, or any of the settings"),
+                   br(),
+                   actionButton("quit", "Quit", icon("sign-out")),
+             helpText("Press Quit to exit the application")
+           
+           ),
+           br(),
 
-        p('Note: Input values (either numeric or character) must be separated by tabs. Copy and paste from Excel/Numbers.'),
-
-        p(HTML("<b><div style='background-color:#FADDF2;border:1px solid black;'>Please make sure that your data includes the header (variable names) in the first row.</div></b>")),
+        p('Note: Input values (either numeric or character) must be separated by tabs. Copy and paste from Excel.Please make sure that your data includes the header (variable names) in the first row.'),
 
         aceEditor("text2", value="i01\ti02\ti03\ti04\n2\t1\t3\t3\n2\t1\t3\t1\n2\t1\t2\t1\n5\t5\t5\t5\n4\t1\t4\t2\n3\t3\t3\t4\n3\t2\t4\t1\n4\t3\t4\t3\n4\t2\t4\t3\n3\t2\t3\t2\n3\t3\t4\t3\n3\t1\t4\t3\n3\t4\t4\t5\n4\t3\t3\t3\n3\t2\t3\t3\n2\t2\t3\t3\n3\t3\t5\t3\n3\t3\t4\t2\n1\t1\t1\t1\n1\t1\t5\t2\n3\t3\t4\t4\n3\t1\t4\t1\n6\t6\t6\t6\n3\t1\t4\t3\n2\t2\t4\t2\n3\t3\t3\t2\n4\t3\t4\t3\n3\t3\t5\t5\n1\t1\t3\t1\n1\t1\t1\t1\n3\t3\t3\t3\n4\t3\t3\t3\n2\t1\t4\t3\n2\t2\t4\t3\n4\t5\t6\t4\n4\t2\t4\t3\n3\t3\t3\t3\n4\t3\t4\t3\n1\t1\t1\t1\n2\t3\t2\t3\n4\t3\t5\t3\n2\t2\t2\t2\n3\t3\t4\t3\n4\t4\t4\t4\n5\t3\t5\t5\n4\t3\t4\t6\n2\t2\t4\t6\n5\t3\t5\t5\n4\t4\t5\t4\n2\t1\t3\t1\n1\t3\t4\t4\n5\t3\t5\t3\n2\t2\t4\t1\n5\t4\t3\t3\n3\t2\t4\t4\n1\t1\t2\t3\n3\t1\t2\t3\n2\t3\t5\t5\n3\t3\t4\t4\n5\t3\t4\t4\n2\t2\t5\t3\n2\t1\t3\t3\n2\t2\t4\t4\n4\t3\t3\t4\n1\t2\t2\t2\n4\t2\t4\t4\n3\t3\t3\t2\n2\t1\t2\t1\n5\t2\t5\t3\n3\t3\t3\t4\n5\t2\t4\t5\n2\t1\t1\t1\n3\t2\t5\t3\n4\t3\t4\t4\n4\t2\t4\t4\n1\t1\t1\t1\n4\t4\t4\t2\n3\t1\t3\t1\n1\t1\t3\t1\n3\t1\t4\t2\n3\t1\t3\t2\n1\t1\t3\t2\n4\t2\t3\t3\n1\t3\t2\t1\n3\t3\t4\t3\n3\t1\t5\t1\n4\t3\t5\t4\n2\t2\t2\t2\n1\t1\t1\t1\n4\t1\t2\t2\n3\t4\t5\t3\n4\t3\t4\t3\n3\t2\t2\t2\n3\t2\t3\t2\n3\t3\t5\t4\n3\t1\t3\t2\n3\t3\t4\t2\n3\t2\t3\t1\n3\t4\t5\t5\n2\t2\t3\t3\n4\t4\t4\t4\n3\t4\t6\t5\n1\t1\t3\t1\n1\t1\t1\t1\n3\t3\t4\t3\n2\t2\t4\t1\n1\t1\t2\t1\n2\t1\t2\t1\n3\t3\t4\t2\n2\t2\t4\t2\n2\t1\t3\t1\n1\t2\t3\t1\n4\t3\t4\t3\n1\t2\t3\t3\n2\t2\t3\t3\n3\t4\t4\t4\n1\t1\t1\t2\n1\t1\t2\t2\n2\t1\t3\t2\n3\t3\t5\t4\n4\t4\t4\t4\n3\t3\t3\t2\n4\t3\t4\t4\n1\t3\t4\t3\n3\t3\t3\t3\n2\t1\t2\t2\n2\t4\t5\t5\n1\t1\t4\t2\n2\t2\t5\t2\n4\t3\t4\t3\n2\t2\t3\t2\n4\t3\t4\t4\n1\t1\t1\t2\n3\t4\t4\t3\n3\t3\t4\t3\n4\t3\t4\t3\n3\t3\t5\t3\n2\t1\t2\t2\n3\t2\t4\t2\n5\t3\t5\t3\n3\t1\t1\t1\n4\t3\t5\t3\n3\t2\t3\t2\n2\t1\t2\t1\n2\t2\t2\t2\n3\t3\t4\t2\n1\t1\t1\t1\n1\t1\t1\t1\n4\t3\t3\t2\n3\t2\t2\t2\n4\t2\t3\t2\n4\t4\t4\t5\n3\t3\t5\t4\n3\t4\t4\t3\n3\t3\t4\t4\n3\t3\t3\t1\n3\t3\t4\t3\n5\t4\t5\t5\n3\t2\t3\t3\n4\t3\t5\t4\n1\t1\t3\t1\n2\t2\t4\t3\n3\t3\t5\t4\n3\t3\t4\t2\n2\t1\t2\t2\n3\t2\t4\t2\n1\t1\t4\t1\n4\t4\t4\t4\n4\t3\t3\t2\n2\t2\t4\t2\n3\t3\t4\t3\n4\t3\t5\t3\n5\t3\t4\t4\n3\t3\t5\t4\n3\t3\t4\t3\n2\t4\t4\t3\n3\t2\t4\t3\n4\t4\t4\t4\n3\t2\t5\t3\n3\t1\t3\t4\n4\t3\t4\t4\n3\t2\t4\t3\n4\t3\t4\t4\n2\t2\t3\t4\n2\t1\t3\t3\n3\t3\t5\t4\n3\t2\t4\t4\n5\t4\t5\t4\n4\t2\t5\t4\n4\t2\t4\t2\n2\t2\t5\t4\n3\t3\t4\t1\n2\t2\t5\t3",
             mode="r", theme="cobalt", height="400px"),
@@ -332,8 +339,8 @@ shinyUI(navbarPage("IRTShiny", windowTitle="IRTShiny v1.1",
                  h5('Authors'),
 
                  HTML('<div style="clear: left;"><img src="http://kylehamilton.com/wp-content/uploads/2014/11/kyle80.jpg" alt="" style="float: left; margin-right:5px" /></div>'),
-                 p(a("William Kyle Hamilton - University of California, Merced", href="http://www.kylehamilton.com", target="_blank")),
-                 p("William Kyle Hamilton maintains this application and has authored new features."),
+                 p(a("W. Kyle Hamilton - University of California, Merced", href="http://www.kylehamilton.com", target="_blank")),
+                 p("W. Kyle Hamilton maintains this application and has authored new features."),
 
                  br(),
                  HTML('<div style="clear: left;"><img src="http://kylehamilton.com/wp-content/uploads/2014/11/atsushi80.jpg" alt="" style="float: left; margin-right:5px" /></div>'),
@@ -352,7 +359,7 @@ shinyUI(navbarPage("IRTShiny", windowTitle="IRTShiny v1.1",
                  strong('License'),
 
                  p("IRTShiny: Item Response Theory with Shiny"),
-                 p(" Copyright 2015  William Kyle Hamilton and Atsushi Mizumoto"),
+                 p(" Copyright 2017  W. Kyle Hamilton and Atsushi Mizumoto"),
 
                  p(" This program is free software you can redistribute it and or modify
            it under the terms of the GNU General Public License as published by
